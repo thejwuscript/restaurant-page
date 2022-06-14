@@ -1,7 +1,22 @@
+@font-face {
+  font-family: 'Dancing Script';
+  src: url(./DancingScript-VariableFont_wght.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "JF Open";
+  src: url(./jf-openhuninn-1.1.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 }
 
 .background {
@@ -9,6 +24,7 @@ body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+  z-index: -1;
 
 }
 
@@ -19,11 +35,59 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
-p {
+h1 {
+  margin: 0 0 72px 0;
   color: white;
-  font-size: 3rem;
-  font-weight: bold;
+  font-family: 'Dancing Script', sans-serif;
+  font-size: 6rem;
   z-index: 9;
+}
+
+header {
+  height: 60px;
+
+}
+
+footer {
+  height: 40px;
+}
+
+header, footer {
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  color: white;
+  font-family: 'JF Open', sans-serif;
+  gap: 96px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-family: 'JF Open', sans-serif;
+  font-size: 2rem;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+#content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#content p {
+  font-family: 'Dancing Script', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin: 0;
 }
