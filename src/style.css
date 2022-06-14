@@ -1,8 +1,11 @@
 body {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .background {
+  position: fixed;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -10,10 +13,17 @@ body {
 }
 
 .overlay {  
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+p {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 9;
 }
