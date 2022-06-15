@@ -1,5 +1,7 @@
 const initalLoad = () => {
-  document.body.prepend(loadHeader())
+  document.body.prepend(loadHeader(),)
+  document.body.append(loadFooter())
+  document.getElementById('content').append(...loadBackground().concat(loadContent()))
 }
 
 function loadHeader() {
