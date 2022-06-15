@@ -1,9 +1,5 @@
 import 'normalize.css';
 import './style.css';
+import initalLoad from './initial_load';
 
-//const myBackground = new Image()
-//myBackground.src = Background
-
-
-
-console.log("test")
+initalLoad();
