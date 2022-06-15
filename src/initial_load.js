@@ -1,7 +1,10 @@
+import homeContent from './home'
+
 const initalLoad = () => {
   document.body.prepend(loadHeader(),)
   document.body.append(loadFooter())
-  document.getElementById('content').append(...loadBackground().concat(loadContent()))
+  //document.getElementById('content').append(...loadBackground().concat(homeContent()))
+  document.body.prepend(...loadBackground())
 }
 
 function loadHeader() {
@@ -34,15 +37,6 @@ function loadBackground() {
   overlay.className = "overlay"
 
   return [background, overlay]
-}
-
-function loadContent() {
-  const headline = document.createElement('h1')
-  headline.textContent = "Asian Fusion"
-  const foundedInfo = document.createElement('p')
-  foundedInfo.textContent = "Founded in 1967"
-
-  return [headline, foundedInfo]
 }
 
 export default initalLoad;

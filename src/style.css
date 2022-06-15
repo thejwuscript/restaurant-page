@@ -16,7 +16,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
 }
 
 .background {
@@ -47,8 +46,7 @@ h1 {
 }
 
 header {
-  height: 56px;
-
+  height: 48px;
 }
 
 footer {
@@ -63,14 +61,14 @@ header, footer {
   width: 100vw;
   color: white;
   font-family: 'JF Open', sans-serif;
-  gap: 96px;
+  gap: 120px;
 }
 
 header a {
   color: white;
   text-decoration: none;
   font-family: 'JF Open', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 header a:hover {
@@ -83,11 +81,70 @@ header a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+  padding: 32px 0;
+  gap: 32px;
 }
 
-#content p {
+div p {
   font-family: 'Dancing Script', sans-serif;
   font-size: 2rem;
   color: white;
   margin: 0;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+h2 {
+  font-family: 'Dancing Script', sans-serif;
+  font-size: 2.5rem;
+}
+
+.card-description {
+  font-family: 'JF Open', sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 48px;
+}
+
+.card-container {
+  width: 660px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 3fr;
+  column-gap: 32px;
+}
+
+.food-image {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h3 {
+  font-family: 'JF Open', sans-serif;
+  font-size: 1.5rem;
 }
