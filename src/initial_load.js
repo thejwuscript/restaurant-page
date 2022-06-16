@@ -1,4 +1,5 @@
 import homeLoad from './home'
+import BgImage from './background.jpg' 
 
 const initalLoad = () => {
   document.body.prepend(loadHeader(),)
@@ -32,7 +33,7 @@ function loadFooter() {
 function loadBackground() {
   const background = document.createElement('img')
   const overlay = document.createElement('div')
-  background.src = "../src/background.jpg"
+  background.src = BgImage
   background.className = "background"
   overlay.className = "overlay"
 

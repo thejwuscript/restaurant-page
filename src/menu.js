@@ -1,3 +1,9 @@
+import Pho from './pho.jpg'
+import Salad from './salad.jpg'
+import SesameBalls from './sesame_balls.jpg'
+import SpicyNoodle from './spicy.jpg'
+import Sushi from './sushi.jpg'
+
 function menuLoad() {
   document.getElementById('content').append(appyContent(), mainCourseContent())
 }
@@ -19,14 +25,14 @@ function appetizerList() {
   const appys = {
     1: {
       dish: "Salad",
-      imageSource: "../src/salad.jpg",
-      alternate: "salad",
+      imageSource: Salad,
+      alternate: "Salad",
       description: "A great appy to share with friends!"
     },
     2: {
       dish: "Sesame Balls",
-      imageSource: "../src/sesame_balls.jpg",
-      alternate: "dumplings",
+      imageSource: SesameBalls,
+      alternate: "Sesame Balls",
       description: "The quintessential asian snack goes well with anything!"
     }
   }
@@ -75,20 +81,20 @@ function mainCourseList() {
   const mainCourse = {
     1: {
       dish: "Vietnamese Pho",
-      imageSource: "../src/pho.jpg",
-      alternate: "pho",
+      imageSource: Pho,
+      alternate: "Pho",
       description: "Thinly sliced meat cooks to perfection in the clear broth. Yum!"
     },
     2: {
       dish: "Spicy Noodle Soup",
-      imageSource: "../src/spicy.jpg",
-      alternate: "spicy noodle soup",
+      imageSource: SpicyNoodle,
+      alternate: "Spicy Noodle Soup",
       description: "A bowl of hot and spicy noodle soup is perfect in the cold winter!"
     },
     3: {
       dish: "Sushi Platter",
-      imageSource: "../src/sushi.jpg",
-      alternate: "sushi",
+      imageSource: Sushi,
+      alternate: "Sushi",
       description: "You can't go wrong with sushi!"
     }
   }

@@ -166,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var norm
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n\n\nconst initalLoad = () => {\n  document.body.prepend(loadHeader(),)\n  document.body.append(...loadBackground())\n  document.body.append(loadFooter())\n  ;(0,_home__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n}\n\nfunction loadHeader() {\n  const header = document.createElement('header')\n  const fragment = document.createDocumentFragment()\n  const tabs = ['Home', 'Menu', 'Contact']\n\n  tabs.forEach( tab => {\n    const link = document.createElement('a')\n    link.textContent = tab\n    fragment.appendChild(link)\n  })\n  header.appendChild(fragment)\n\n  return header\n}\n\nfunction loadFooter() {\n  const footer = document.createElement('footer')\n  footer.textContent = \"No Rights Reserved. For Educational Purposes Only.\"\n\n  return footer\n}\n\nfunction loadBackground() {\n  const background = document.createElement('img')\n  const overlay = document.createElement('div')\n  background.src = \"../src/background.jpg\"\n  background.className = \"background\"\n  overlay.className = \"overlay\"\n\n  return [background, overlay]\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initalLoad);\n\n\n//# sourceURL=webpack://restaurant-page/./src/initial_load.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _background_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./background.jpg */ \"./src/background.jpg\");\n\n \n\nconst initalLoad = () => {\n  document.body.prepend(loadHeader(),)\n  document.body.append(...loadBackground())\n  document.body.append(loadFooter())\n  ;(0,_home__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n}\n\nfunction loadHeader() {\n  const header = document.createElement('header')\n  const fragment = document.createDocumentFragment()\n  const tabs = ['Home', 'Menu', 'Contact']\n\n  tabs.forEach( tab => {\n    const link = document.createElement('a')\n    link.textContent = tab\n    fragment.appendChild(link)\n  })\n  header.appendChild(fragment)\n\n  return header\n}\n\nfunction loadFooter() {\n  const footer = document.createElement('footer')\n  footer.textContent = \"No Rights Reserved. For Educational Purposes Only.\"\n\n  return footer\n}\n\nfunction loadBackground() {\n  const background = document.createElement('img')\n  const overlay = document.createElement('div')\n  background.src = _background_jpg__WEBPACK_IMPORTED_MODULE_1__\n  background.className = \"background\"\n  overlay.className = \"overlay\"\n\n  return [background, overlay]\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initalLoad);\n\n\n//# sourceURL=webpack://restaurant-page/./src/initial_load.js?");
 
 /***/ }),
 
@@ -176,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"menuLoad\": () => (/* binding */ menuLoad)\n/* harmony export */ });\nfunction menuLoad() {\n  document.getElementById('content').append(appyContent(), mainCourseContent())\n}\n\nfunction appyContent() {\n  const section = document.createElement('div')\n  section.className = \"section-container\"\n\n  const title = document.createElement('h2')\n  title.className = \"section-title\"\n  title.textContent = \"Appetizer\"\n  section.append(title, appetizerList())\n  return section\n}\n\nfunction appetizerList() {\n  const list = document.createElement('ul')\n\n  const appys = {\n    1: {\n      dish: \"Salad\",\n      imageSource: \"../src/salad.jpg\",\n      alternate: \"salad\",\n      description: \"A great appy to share with friends!\"\n    },\n    2: {\n      dish: \"Sesame Balls\",\n      imageSource: \"../src/sesame_balls.jpg\",\n      alternate: \"dumplings\",\n      description: \"The quintessential asian snack goes well with anything!\"\n    }\n  }\n\n  let appyNodes = []\n\n  for (let i = 1; i < 3; i++) {\n    const item = document.createElement('li')\n    item.className = \"card-container\"\n\n    const name = document.createElement('h3')\n    name.textContent = appys[i].dish\n\n    const image = document.createElement('img')\n    image.className = \"food-image\"\n    image.src = appys[i].imageSource\n    image.alt = appys[i].alternate\n\n    const desc = document.createElement('p')\n    desc.className = \"card-description\"\n    desc.textContent = appys[i].description\n\n    item.append(name, image, desc)\n    appyNodes.push(item)\n  }\n\n  list.append(...appyNodes)\n\n  return list\n}\n\nfunction mainCourseContent() {\n  const section = document.createElement('div')\n  section.className = \"section-container\"\n\n  const title = document.createElement('h2')\n  title.className = \"section-title\"\n  title.textContent = \"Main Course\"\n  section.append(title, mainCourseList())\n  return section\n}\n\nfunction mainCourseList() {\n  const list = document.createElement('ul')\n\n  const mainCourse = {\n    1: {\n      dish: \"Vietnamese Pho\",\n      imageSource: \"../src/pho.jpg\",\n      alternate: \"pho\",\n      description: \"Thinly sliced meat cooks to perfection in the clear broth. Yum!\"\n    },\n    2: {\n      dish: \"Spicy Noodle Soup\",\n      imageSource: \"../src/spicy.jpg\",\n      alternate: \"spicy noodle soup\",\n      description: \"A bowl of hot and spicy noodle soup is perfect in the cold winter!\"\n    },\n    3: {\n      dish: \"Sushi Platter\",\n      imageSource: \"../src/sushi.jpg\",\n      alternate: \"sushi\",\n      description: \"You can't go wrong with sushi!\"\n    }\n  }\n\n  let mainCourseNodes = []\n\n  for (let i = 1; i < 4; i++) {\n    const item = document.createElement('li')\n    item.className = \"card-container\"\n\n    const name = document.createElement('h3')\n    name.textContent = mainCourse[i].dish\n\n    const image = document.createElement('img')\n    image.className = \"food-image\"\n    image.src = mainCourse[i].imageSource\n    image.alt = mainCourse[i].alternate\n\n    const desc = document.createElement('p')\n    desc.className = \"card-description\"\n    desc.textContent = mainCourse[i].description\n\n    item.append(name, image, desc)\n    mainCourseNodes.push(item)\n  }\n\n  list.append(...mainCourseNodes)\n\n  return list\n}\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"menuLoad\": () => (/* binding */ menuLoad)\n/* harmony export */ });\n/* harmony import */ var _pho_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pho.jpg */ \"./src/pho.jpg\");\n/* harmony import */ var _salad_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./salad.jpg */ \"./src/salad.jpg\");\n/* harmony import */ var _sesame_balls_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sesame_balls.jpg */ \"./src/sesame_balls.jpg\");\n/* harmony import */ var _spicy_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./spicy.jpg */ \"./src/spicy.jpg\");\n/* harmony import */ var _sushi_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sushi.jpg */ \"./src/sushi.jpg\");\n\n\n\n\n\n\nfunction menuLoad() {\n  document.getElementById('content').append(appyContent(), mainCourseContent())\n}\n\nfunction appyContent() {\n  const section = document.createElement('div')\n  section.className = \"section-container\"\n\n  const title = document.createElement('h2')\n  title.className = \"section-title\"\n  title.textContent = \"Appetizer\"\n  section.append(title, appetizerList())\n  return section\n}\n\nfunction appetizerList() {\n  const list = document.createElement('ul')\n\n  const appys = {\n    1: {\n      dish: \"Salad\",\n      imageSource: _salad_jpg__WEBPACK_IMPORTED_MODULE_1__,\n      alternate: \"Salad\",\n      description: \"A great appy to share with friends!\"\n    },\n    2: {\n      dish: \"Sesame Balls\",\n      imageSource: _sesame_balls_jpg__WEBPACK_IMPORTED_MODULE_2__,\n      alternate: \"Sesame Balls\",\n      description: \"The quintessential asian snack goes well with anything!\"\n    }\n  }\n\n  let appyNodes = []\n\n  for (let i = 1; i < 3; i++) {\n    const item = document.createElement('li')\n    item.className = \"card-container\"\n\n    const name = document.createElement('h3')\n    name.textContent = appys[i].dish\n\n    const image = document.createElement('img')\n    image.className = \"food-image\"\n    image.src = appys[i].imageSource\n    image.alt = appys[i].alternate\n\n    const desc = document.createElement('p')\n    desc.className = \"card-description\"\n    desc.textContent = appys[i].description\n\n    item.append(name, image, desc)\n    appyNodes.push(item)\n  }\n\n  list.append(...appyNodes)\n\n  return list\n}\n\nfunction mainCourseContent() {\n  const section = document.createElement('div')\n  section.className = \"section-container\"\n\n  const title = document.createElement('h2')\n  title.className = \"section-title\"\n  title.textContent = \"Main Course\"\n  section.append(title, mainCourseList())\n  return section\n}\n\nfunction mainCourseList() {\n  const list = document.createElement('ul')\n\n  const mainCourse = {\n    1: {\n      dish: \"Vietnamese Pho\",\n      imageSource: _pho_jpg__WEBPACK_IMPORTED_MODULE_0__,\n      alternate: \"Pho\",\n      description: \"Thinly sliced meat cooks to perfection in the clear broth. Yum!\"\n    },\n    2: {\n      dish: \"Spicy Noodle Soup\",\n      imageSource: _spicy_jpg__WEBPACK_IMPORTED_MODULE_3__,\n      alternate: \"Spicy Noodle Soup\",\n      description: \"A bowl of hot and spicy noodle soup is perfect in the cold winter!\"\n    },\n    3: {\n      dish: \"Sushi Platter\",\n      imageSource: _sushi_jpg__WEBPACK_IMPORTED_MODULE_4__,\n      alternate: \"Sushi\",\n      description: \"You can't go wrong with sushi!\"\n    }\n  }\n\n  let mainCourseNodes = []\n\n  for (let i = 1; i < 4; i++) {\n    const item = document.createElement('li')\n    item.className = \"card-container\"\n\n    const name = document.createElement('h3')\n    name.textContent = mainCourse[i].dish\n\n    const image = document.createElement('img')\n    image.className = \"food-image\"\n    image.src = mainCourse[i].imageSource\n    image.alt = mainCourse[i].alternate\n\n    const desc = document.createElement('p')\n    desc.className = \"card-description\"\n    desc.textContent = mainCourse[i].description\n\n    item.append(name, image, desc)\n    mainCourseNodes.push(item)\n  }\n\n  list.append(...mainCourseNodes)\n\n  return list\n}\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
 
 /***/ }),
 
@@ -190,6 +190,16 @@ eval("module.exports = __webpack_require__.p + \"994c175ce44b12795d05.ttf\";\n\n
 
 /***/ }),
 
+/***/ "./src/background.jpg":
+/*!****************************!*\
+  !*** ./src/background.jpg ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"6ef6db913df93a631506.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/background.jpg?");
+
+/***/ }),
+
 /***/ "./src/jf-openhuninn-1.1.ttf":
 /*!***********************************!*\
   !*** ./src/jf-openhuninn-1.1.ttf ***!
@@ -197,6 +207,56 @@ eval("module.exports = __webpack_require__.p + \"994c175ce44b12795d05.ttf\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"8b3953f644e641262a5c.ttf\";\n\n//# sourceURL=webpack://restaurant-page/./src/jf-openhuninn-1.1.ttf?");
+
+/***/ }),
+
+/***/ "./src/pho.jpg":
+/*!*********************!*\
+  !*** ./src/pho.jpg ***!
+  \*********************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"a5ade32177761cc24450.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/pho.jpg?");
+
+/***/ }),
+
+/***/ "./src/salad.jpg":
+/*!***********************!*\
+  !*** ./src/salad.jpg ***!
+  \***********************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"b00dfb5cdc97a949eb79.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/salad.jpg?");
+
+/***/ }),
+
+/***/ "./src/sesame_balls.jpg":
+/*!******************************!*\
+  !*** ./src/sesame_balls.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"5dbe693757a636e7dff8.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/sesame_balls.jpg?");
+
+/***/ }),
+
+/***/ "./src/spicy.jpg":
+/*!***********************!*\
+  !*** ./src/spicy.jpg ***!
+  \***********************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"b48360bec72cf97da151.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/spicy.jpg?");
+
+/***/ }),
+
+/***/ "./src/sushi.jpg":
+/*!***********************!*\
+  !*** ./src/sushi.jpg ***!
+  \***********************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"b95e057eef034837221f.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/sushi.jpg?");
 
 /***/ })
 
