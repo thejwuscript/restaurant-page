@@ -1,10 +1,10 @@
-import homeContent from './home'
+import homeLoad from './home'
 
 const initalLoad = () => {
   document.body.prepend(loadHeader(),)
+  document.body.append(...loadBackground())
   document.body.append(loadFooter())
-  //document.getElementById('content').append(...loadBackground().concat(homeContent()))
-  document.body.prepend(...loadBackground())
+  homeLoad()
 }
 
 function loadHeader() {

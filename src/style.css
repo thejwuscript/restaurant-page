@@ -12,10 +12,15 @@
   font-style: normal;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }
 
 .background {
